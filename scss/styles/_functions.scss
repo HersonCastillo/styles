@@ -1,0 +1,7 @@
+@function shadow-color($measure, $color) {
+  @return $measure rgba($color: $color, $alpha: 1);
+}
+
+@function calc-cols($col) {
+  @return calc((1 / (12 / #{$col})) * 100%);
+}

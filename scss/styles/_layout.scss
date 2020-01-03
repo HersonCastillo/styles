@@ -1,0 +1,35 @@
+// Flex
+
+@import "./variables";
+@import "./mixins";
+
+.container {
+  margin: 10px;
+  padding: 5px;
+}
+
+@media screen and (max-width: 599px) {
+  .row-flex {
+    display: block;
+    width: 100%;
+  }
+  @each $col in $cols {
+    @include min-cols-definition($col);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .row-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: auto;
+  }
+  @each $col in $cols {
+    @include max-cols-definition($col);
+  }
+}
+
+@each $col in $cols {
+  @include grid-cols-definition($col);
+}

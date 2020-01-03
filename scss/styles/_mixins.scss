@@ -1,0 +1,52 @@
+@import "./functions";
+
+@mixin max-cols-definition($col) {
+  .col-#{$col}-flex {
+    width: calc-cols($col);
+  }
+}
+
+@mixin min-cols-definition($col) {
+  .col-#{$col}-flex {
+    width: 100%;
+  }
+}
+
+@mixin grid-cols-definition($col) {
+  .col-#{$col}-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(#{$col} * 20px), 1fr));
+    grid-gap: 1rem;
+  }
+}
+
+@mixin placeholder-form-control($font, $color) {
+  label:first-of-type {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 900;
+    font-family: #{$font};
+    color: #{$color};
+    letter-spacing: 1px;
+    margin-left: 5px;
+  }
+}
+
+@mixin hint-form-control($font, $color) {
+  label:nth-child(3) {
+    display: block;
+    font-size: 0.75em;
+    font-weight: 200;
+    font-family: #{$font};
+    color: #{$color};
+  }
+}
+
+@mixin avatar-size($pixels) {
+  div.avatar-#{$pixels},
+  img.avatar-#{$pixels} {
+    width: #{$pixels};
+    height: #{$pixels};
+  }
+}

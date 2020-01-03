@@ -1,0 +1,58 @@
+@import "../variables";
+
+.btn {
+  border-style: none;
+  outline-style: none;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  background-color: $default-button-background;
+  cursor: pointer;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: $global-fonts;
+  color: $default-button-color;
+  text-shadow: $default-button-text-shadow;
+  box-shadow: $default-button-box-shadow;
+  letter-spacing: 2px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: $default-button-box-shadow-hover;
+}
+
+.btn:active {
+  box-shadow: $default-button-box-shadow-active;
+}
+
+.btn-warn {
+  background-color: $warn-button-background;
+  color: $warn-button-color;
+  text-shadow: $warn-button-text-shadow;
+  box-shadow: $warn-button-box-shadow;
+}
+
+.btn-warn:hover {
+  box-shadow: $warn-button-box-shadow-hover;
+}
+
+.btn-warn:active {
+  box-shadow: $warn-button-box-shadow-active;
+}
+
+.btn-primary {
+  background-color: $primary-button-background;
+  color: $primary-button-color;
+  text-shadow: $primary-button-text-shadow;
+  box-shadow: $primary-button-box-shadow;
+}
+
+.btn-primary:hover {
+  box-shadow: $primary-button-box-shadow-hover;
+}
+
+.btn-primary:active {
+  box-shadow: $primary-button-box-shadow-active;
+}

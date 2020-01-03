@@ -1,0 +1,47 @@
+@import "./functions";
+
+$cols: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+$avatar-measures: 100px, 150px, 200px, 250px, 300px;
+
+$default-button-background: #363636;
+$default-button-color: #f8f8f8;
+
+$warn-button-background: #d55;
+$warn-button-color: $default-button-color;
+
+$primary-button-background: hsl(224, 58%, 43%);
+$primary-button-color: $default-button-color;
+
+$global-fonts: "Roboto", Arial, Helvetica, sans-serif;
+
+$primary-input-form: hsl(224, 100%, 59%);
+$primary-input-form-content: rgb(231, 239, 255);
+
+$error-input-form: #d55;
+$error-input-form-content: rgb(255, 224, 224);
+
+$measure-color: 1px 1px 2px 1px;
+$measure-background: 1px 1px 4px 1px;
+$measure-text: 1px 1px 5px;
+$measure-click: 1px 1px 7px 1px;
+
+$default-button-box-shadow: shadow-color($measure-color, $default-button-background);
+$default-button-box-shadow-hover: shadow-color($measure-background, $default-button-background);
+$default-button-text-shadow: shadow-color($measure-text, $default-button-background);
+$default-button-box-shadow-active: shadow-color($measure-click, $default-button-background);
+
+$warn-button-box-shadow: shadow-color($measure-color, $warn-button-background);
+$warn-button-box-shadow-hover: shadow-color($measure-background, $warn-button-background);
+$warn-button-text-shadow: shadow-color($measure-text, $warn-button-background);
+$warn-button-box-shadow-active: shadow-color($measure-click, $warn-button-background);
+
+$primary-button-box-shadow: shadow-color($measure-color, $primary-button-background);
+$primary-button-box-shadow-hover: shadow-color($measure-background, $primary-button-background);
+$primary-button-text-shadow: shadow-color($measure-text, $primary-button-background);
+$primary-button-box-shadow-active: shadow-color($measure-click, $primary-button-background);
+
+$primary-input-form-shadow: shadow-color($measure-color, $primary-input-form);
+
+$progressbar-container-color: azure;
+$progressbar-color: hsl(224, 100%, 59%);
+$progressbar-width: 30%;

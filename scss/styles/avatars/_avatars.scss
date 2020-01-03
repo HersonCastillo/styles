@@ -1,0 +1,6 @@
+@import "../variables";
+@import "../mixins";
+
+@each $measure in $avatar-measures {
+  @include avatar-size($measure);
+}

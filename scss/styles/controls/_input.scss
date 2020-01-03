@@ -1,0 +1,55 @@
+@import "../variables";
+@import "../mixins";
+
+input.box-control,
+textarea.box-control,
+select.dropdown {
+  outline-style: none;
+  border-style: none;
+  padding: 10px;
+  font-family: $global-fonts;
+  border: 4px solid $primary-input-form;
+  border-radius: 5px;
+  transition: border 0.2s ease-in-out;
+  background-color: $primary-input-form-content;
+  width: calc(100% - 30px);
+}
+
+input.box-control:hover,
+textarea.box-control:hover,
+input.box-control:focus,
+textarea.box-control:focus {
+  border: 4px solid $primary-button-background;
+}
+
+textarea.box-control {
+  resize: vertical;
+}
+
+div.box-group {
+  padding: 5px;
+  max-width: 100%;
+
+  @include placeholder-form-control($global-fonts, $primary-input-form);
+  @include hint-form-control($global-fonts, $primary-input-form);
+}
+
+input.box-error {
+  background-color: $error-input-form-content;
+  border: 4px solid $error-input-form;
+}
+
+input.box-error:hover,
+textarea.box-error:hover,
+input.box-error:focus,
+textarea.box-error:focus {
+  border: 4px solid $warn-button-background;
+}
+
+div.box-group.box-error {
+  @include placeholder-form-control($global-fonts, $error-input-form);
+  @include hint-form-control($global-fonts, $error-input-form);
+}
+div.box-group.box-error > input.box-control {
+  @extend .box-error;
+}

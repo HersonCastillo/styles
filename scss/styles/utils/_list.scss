@@ -1,0 +1,58 @@
+@import "../variables";
+@import "../functions";
+
+div.list {
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+div.list div.list-item {
+  max-width: 100%;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex: auto;
+}
+
+div.list div.list-item:last-of-type {
+  border-bottom: none;
+}
+
+div.list div.list-item div.avatar-item img {
+  max-width: 95px;
+  max-height: 95px;
+  border-radius: 5px;
+  box-shadow: shadow-color(1px 1px 10px 1px, #ddd);
+}
+
+div.list div.list-item div.content-item {
+  align-items: center;
+  padding: 10px;
+  font-family: $global-fonts;
+}
+
+span.list-title {
+  font-weight: 900;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  line-height: 1px;
+}
+
+span.list-text, p.list-text {
+  font-weight: 100;
+  font-size: .9em;
+  color: gray;
+  line-height: 1px;
+}
+
+div.list div.list-item div.actions-item:before {
+  content: '';
+  flex: 1 0 auto;
+}
+
+div.list div.list-item div.actions-item {
+  display: flex;
+  align-items: center;
+}
